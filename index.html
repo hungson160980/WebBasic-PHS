@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo các thẻ HTML cơ bản - Trang học HTML cho người mới bắt đầu">
+  <title>Demo Thẻ HTML Cơ Bản</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🌐 HTML Basics</div>
+    <nav>
+      <a href="#headings">Headings</a>
+      <a href="#text">Text</a>
+      <a href="#links">Links</a>
+      <a href="#lists">Lists</a>
+      <a href="#media">Media</a>
+      <a href="#table">Table</a>
+      <a href="#form">Form</a>
+      <a href="#semantic">Semantic</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="badge">📖 Học HTML cơ bản</div>
+    <h1>Các Thẻ HTML<br>Cơ Bản</h1>
+    <p>Tổng hợp và demo trực quan các thẻ HTML thường dùng nhất, giúp bạn nắm vững nền tảng lập trình web.</p>
+  </section>
+
+  <main class="container">
+
+    <!-- ===== HEADINGS ===== -->
+    <section class="section" id="headings">
+      <h2 class="section-title"><span class="icon" style="background:rgba(124,92,252,0.15);color:var(--accent-1)">H</span> Thẻ Heading (h1 - h6)</h2>
+
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="tag-name">&lt;h1&gt; - &lt;h6&gt;</span>
+          <span class="desc">Tiêu đề từ lớn đến nhỏ</span>
+        </div>
+        <div class="card-body">
+          <div class="code-panel">
+            <div class="label">Mã HTML</div>
+            <pre><span class="hl-tag">&lt;h1&gt;</span><span class="hl-text">Heading 1</span><span class="hl-tag">&lt;/h1&gt;</span>
+<span class="hl-tag">&lt;h2&gt;</span><span class="hl-text">Heading 2</span><span class="hl-tag">&lt;/h2&gt;</span>
+<span class="hl-tag">&lt;h3&gt;</span><span class="hl-text">Heading 3</span><span class="hl-tag">&lt;/h3&gt;</span>
+<span class="hl-tag">&lt;h4&gt;</span><span class="hl-text">Heading 4</span><span class="hl-tag">&lt;/h4&gt;</span>
+<span class="hl-tag">&lt;h5&gt;</span><span class="hl-text">Heading 5</span><span class="hl-tag">&lt;/h5&gt;</span>
+<span class="hl-tag">&lt;h6&gt;</span><span class="hl-text">Heading 6</span><span class="hl-tag">&lt;/h6&gt;</span></pre>
+          </div>
+          <div class="preview-panel">
+            <div class="label">Kết quả</div>
+            <div class="result">
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="section" id="text">
+      <h2 class="section-title"><span class="icon" style="background:rgba(0,212,255,0.15);color:var(--accent-2)">T</span> Thẻ Văn Bản</h2>
+
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="tag-name">&lt;p&gt; &lt;strong&gt; &lt;em&gt; &lt;mark&gt; &lt;br&gt; &lt;hr&gt;</span>
+          <span class="desc">Định dạng văn bản</span>
+        </div>
+        <div class="card-body">
+          <div class="code-panel">
+            <div class="label">Mã HTML</div>
+            <pre><span class="hl-tag">&lt;p&gt;</span><span class="hl-text">Đây là đoạn văn bản.</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;strong&gt;</span><span class="hl-text">Chữ đậm</span><span class="hl-tag">&lt;/strong&gt;</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;em&gt;</span><span class="hl-text">Chữ nghiêng</span><span class="hl-tag">&lt;/em&gt;</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;p&gt;</span><span class="hl-tag">&lt;mark&gt;</span><span class="hl-text">Đánh dấu</span><span class="hl-tag">&lt;/mark&gt;</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;p&gt;</span><span class="hl-text">Dòng 1</span><span class="hl-tag">&lt;br&gt;</span><span class="hl-text">Dòng 2</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;hr&gt;</span>
+<span class="hl-tag">&lt;blockquote&gt;</span><span class="hl-text">Trích dẫn</span><span class="hl-tag">&lt;/blockquote&gt;</span></pre>
+          </div>
+          <div class="preview-panel">
+            <div class="label">Kết quả</div>
+            <div class="result">
+              <p>Đây là đoạn văn bản.</p>
+              <p><strong>Chữ đậm</strong></p>
+              <p><em>Chữ nghiêng</em></p>
+              <p><mark>Đánh dấu</mark></p>
+              <p>Dòng 1<br>Dòng 2</p>
+              <hr>
+              <blockquote>Trích dẫn</blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LINKS ===== -->
+    <section class="section" id="links">
+      <h2 class="section-title"><span class="icon" style="background:rgba(255,107,157,0.15);color:var(--accent-3)">🔗</span> Thẻ Liên Kết</h2>
+
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="tag-name">&lt;a&gt;</span>
+          <span class="desc">Liên kết / hyperlink</span>
+        </div>
+        <div class="card-body">
+          <div class="code-panel">
+            <div class="label">Mã HTML</div>
+            <pre><span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"https://google.com"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-text">Đi tới Google</span>
+<span class="hl-tag">&lt;/a&gt;</span>
+
+<span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"#headings"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-text">Cuộn lên Headings</span>
+<span class="hl-tag">&lt;/a&gt;</span></pre>
+          </div>
+          <div class="preview-panel">
+            <div class="label">Kết quả</div>
+            <div class="result">
+              <p><a href="https://google.com" target="_blank">Đi tới Google ↗</a></p>
+              <p><a href="#headings">Cuộn lên Headings ↑</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LISTS ===== -->
+    <section class="section" id="lists">
+      <h2 class="section-title"><span class="icon" style="background:rgba(255,217,61,0.15);color:var(--accent-4)">☰</span> Thẻ Danh Sách</h2>
+
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="tag-name">&lt;ul&gt; &lt;ol&gt; &lt;dl&gt;</span>
+          <span class="desc">Danh sách không/có thứ tự, mô tả</span>
+        </div>
+        <div class="card-body">
+          <div class="code-panel">
+            <div class="label">Mã HTML</div>
+            <pre><span class="hl-tag">&lt;ul&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">HTML</span><span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">CSS</span><span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">JavaScript</span><span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ul&gt;</span>
+
+<span class="hl-tag">&lt;ol&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">Bước 1</span><span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span><span class="hl-text">Bước 2</span><span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ol&gt;</span></pre>
+          </div>
+          <div class="preview-panel">
+            <div class="label">Kết quả</div>
+            <div class="result">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <ol>
+                <li>Bước 1</li>
+                <li>Bước 2</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MEDIA ===== -->
+    <section class="section" id="media">
+      <h2 class="section-title"><span class="icon" style="background:rgba(107,203,119,0.15);color:var(--accent-5)">🖼</span> Thẻ Hình Ảnh</h2>
+
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="tag-name">&lt;img&gt;</span>
+          <span class="desc">Hình ảnh</span>
+        </div>
+        <div class="card-body">
+          <div class="code-panel">
+            <div class="label">Mã HTML</div>
+            <pre><span class="hl-tag">&lt;img</span>
+  <span class="hl-attr">src=</span><span class="hl-val">"https://picsum.photos/300/150"</span>
+  <span class="hl-attr">alt=</span><span class="hl-val">"Ảnh minh họa"</span>
+  <span class="hl-attr">width=</span><span class="hl-val">"300"</span>
+<span class="hl-tag">/&gt;</span></pre>
+          </div>
+          <div class="preview-panel">
+            <div class="label">Kết quả</div>
+            <div class="result">
+              <img src="https://picsum.photos/300/150" alt="Ảnh minh họa" width="300">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TABLE ===== -->
+    <section class="section" id="table">
+      <h2 class="section-title"><span class="icon" style="background:rgba(124,92,252,0.15);color:var(--accent-1)">▦</span> Thẻ Bảng</h2>
+
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="tag-name">&lt;table&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt;</span>
+          <span class="desc">Bảng dữ liệu</span>
+        </div>
+        <div class="card-body">
+          <div class="code-panel">
+            <div class="label">Mã HTML</div>
+            <pre><span class="hl-tag">&lt;table&gt;</span>
+  <span class="hl-tag">&lt;tr&gt;</span>
+    <span class="hl-tag">&lt;th&gt;</span><span class="hl-text">Tên</span><span class="hl-tag">&lt;/th&gt;</span>
+    <span class="hl-tag">&lt;th&gt;</span><span class="hl-text">Tuổi</span><span class="hl-tag">&lt;/th&gt;</span>
+  <span class="hl-tag">&lt;/tr&gt;</span>
+  <span class="hl-tag">&lt;tr&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">An</span><span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">20</span><span class="hl-tag">&lt;/td&gt;</span>
+  <span class="hl-tag">&lt;/tr&gt;</span>
+  <span class="hl-tag">&lt;tr&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">Bình</span><span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span><span class="hl-text">22</span><span class="hl-tag">&lt;/td&gt;</span>
+  <span class="hl-tag">&lt;/tr&gt;</span>
+<span class="hl-tag">&lt;/table&gt;</span></pre>
+          </div>
+          <div class="preview-panel">
+            <div class="label">Kết quả</div>
+            <div class="result">
+              <table>
+                <tr><th>Tên</th><th>Tuổi</th></tr>
+                <tr><td>An</td><td>20</td></tr>
+                <tr><td>Bình</td><td>22</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORM ===== -->
+    <section class="section" id="form">
+      <h2 class="section-title"><span class="icon" style="background:rgba(0,212,255,0.15);color:var(--accent-2)">📝</span> Thẻ Form</h2>
+
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="tag-name">&lt;form&gt; &lt;input&gt; &lt;select&gt; &lt;textarea&gt; &lt;button&gt;</span>
+          <span class="desc">Biểu mẫu nhập liệu</span>
+        </div>
+        <div class="card-body">
+          <div class="code-panel">
+            <div class="label">Mã HTML</div>
+            <pre><span class="hl-tag">&lt;form&gt;</span>
+  <span class="hl-tag">&lt;label&gt;</span><span class="hl-text">Họ tên:</span><span class="hl-tag">&lt;/label&gt;</span>
+  <span class="hl-tag">&lt;input</span> <span class="hl-attr">type=</span><span class="hl-val">"text"</span> <span class="hl-tag">/&gt;</span>
+
+  <span class="hl-tag">&lt;label&gt;</span><span class="hl-text">Email:</span><span class="hl-tag">&lt;/label&gt;</span>
+  <span class="hl-tag">&lt;input</span> <span class="hl-attr">type=</span><span class="hl-val">"email"</span> <span class="hl-tag">/&gt;</span>
+
+  <span class="hl-tag">&lt;label&gt;</span><span class="hl-text">Giới tính:</span><span class="hl-tag">&lt;/label&gt;</span>
+  <span class="hl-tag">&lt;select&gt;</span>
+    <span class="hl-tag">&lt;option&gt;</span><span class="hl-text">Nam</span><span class="hl-tag">&lt;/option&gt;</span>
+    <span class="hl-tag">&lt;option&gt;</span><span class="hl-text">Nữ</span><span class="hl-tag">&lt;/option&gt;</span>
+  <span class="hl-tag">&lt;/select&gt;</span>
+
+  <span class="hl-tag">&lt;label&gt;</span><span class="hl-text">Ghi chú:</span><span class="hl-tag">&lt;/label&gt;</span>
+  <span class="hl-tag">&lt;textarea&gt;&lt;/textarea&gt;</span>
+
+  <span class="hl-tag">&lt;button&gt;</span><span class="hl-text">Gửi</span><span class="hl-tag">&lt;/button&gt;</span>
+<span class="hl-tag">&lt;/form&gt;</span></pre>
+          </div>
+          <div class="preview-panel">
+            <div class="label">Kết quả</div>
+            <div class="result">
+              <form class="demo-form" onsubmit="return false">
+                <label>Họ tên:</label>
+                <input type="text" placeholder="Nguyễn Văn A">
+                <label>Email:</label>
+                <input type="email" placeholder="email@example.com">
+                <label>Giới tính:</label>
+                <select><option>Nam</option><option>Nữ</option></select>
+                <label>Ghi chú:</label>
+                <textarea rows="2" placeholder="Nhập ghi chú..."></textarea>
+                <button type="submit">Gửi</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEMANTIC ===== -->
+    <section class="section" id="semantic">
+      <h2 class="section-title"><span class="icon" style="background:rgba(255,107,157,0.15);color:var(--accent-3)">🏷</span> Thẻ Semantic & Khác</h2>
+
+      <div class="demo-card">
+        <div class="card-header">
+          <span class="tag-name">&lt;details&gt; &lt;code&gt; &lt;pre&gt; &lt;div&gt; &lt;span&gt;</span>
+          <span class="desc">Thẻ ngữ nghĩa và tiện ích</span>
+        </div>
+        <div class="card-body">
+          <div class="code-panel">
+            <div class="label">Mã HTML</div>
+            <pre><span class="hl-tag">&lt;details&gt;</span>
+  <span class="hl-tag">&lt;summary&gt;</span><span class="hl-text">Xem thêm</span><span class="hl-tag">&lt;/summary&gt;</span>
+  <span class="hl-tag">&lt;p&gt;</span><span class="hl-text">Nội dung ẩn</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;/details&gt;</span>
+
+<span class="hl-tag">&lt;p&gt;</span><span class="hl-text">Dùng </span><span class="hl-tag">&lt;code&gt;</span><span class="hl-text">code</span><span class="hl-tag">&lt;/code&gt;</span><span class="hl-text"> inline</span><span class="hl-tag">&lt;/p&gt;</span>
+
+<span class="hl-tag">&lt;div&gt;</span><span class="hl-text">Block container</span><span class="hl-tag">&lt;/div&gt;</span>
+<span class="hl-tag">&lt;span&gt;</span><span class="hl-text">Inline container</span><span class="hl-tag">&lt;/span&gt;</span></pre>
+          </div>
+          <div class="preview-panel">
+            <div class="label">Kết quả</div>
+            <div class="result">
+              <details>
+                <summary>Xem thêm</summary>
+                <p>Đây là nội dung ẩn bên trong thẻ details.</p>
+              </details>
+              <br>
+              <p>Dùng <code>code</code> inline</p>
+              <p><strong>div</strong> = Block container</p>
+              <p><strong>span</strong> = Inline container</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Được tạo bởi <a href="#">WebBasic-PHS</a> · Demo HTML Cơ Bản · 2026</p>
+  </footer>
+
+</body>
+</html>
