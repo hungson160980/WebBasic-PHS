@@ -3,28 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang chủ - Quản lý Tài sản</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Dashboard - Quản lý Tài sản</title>
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <div class="dashboard">
     <aside class="sidebar">
       <div class="sidebar-header">
-        <h2>Menu</h2>
+        <div class="sidebar-logo">📦</div>
+        <h2>Quản lý TS</h2>
       </div>
       <nav class="sidebar-nav">
-        <a href="#" class="nav-item">Nhập tài sản</a>
-        <a href="#" class="nav-item">Nhập phòng ban</a>
-        <a href="#" class="nav-item">Nhập cán bộ</a>
-        <a href="#" class="nav-item">Điều chuyển tài sản</a>
-        <a href="#" class="nav-item">Thanh lý tài sản</a>
+        <a href="index.html" class="nav-item active">
+          <span class="nav-icon">🏠</span> Trang chủ
+        </a>
+        <a href="NhapTaiSan.html" class="nav-item">
+          <span class="nav-icon">📝</span> Nhập tài sản
+        </a>
+        <a href="NhapPhongBan.html" class="nav-item">
+          <span class="nav-icon">🏢</span> Nhập phòng ban
+        </a>
+        <a href="NhapCanBo.html" class="nav-item">
+          <span class="nav-icon">👤</span> Nhập cán bộ
+        </a>
+        <a href="DieuChuyenTaiSan.html" class="nav-item">
+          <span class="nav-icon">🔄</span> Điều chuyển tài sản
+        </a>
+        <a href="ThanhLyTaiSan.html" class="nav-item">
+          <span class="nav-icon">🗑️</span> Thanh lý tài sản
+        </a>
       </nav>
     </aside>
     <main class="main-content">
       <div class="welcome-section">
-        <h1>Chào mừng đến với Hệ thống Quản lý Tài sản</h1>
-        <p>Chọn một chức năng từ menu bên trái để bắt đầu.</p>
+        <h1>Dashboard Quản lý Tài sản</h1>
+        <p>Giám sát tình hình tài sản, phòng ban và cán bộ ngay trên trang chủ.</p>
       </div>
+
+      <section class="section">
+        <div class="section-title">
+          <span class="icon">📊</span>
+          Tổng quan nhanh
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(220px, 1fr)); gap: 16px;">
+          <div class="demo-card">
+            <div class="card-header">
+              <div class="tag-name">Tổng tài sản</div>
+            </div>
+            <div class="card-body">
+              <p class="result">128</p>
+              <p>Tài sản đang quản lý</p>
+            </div>
+          </div>
+          <div class="demo-card">
+            <div class="card-header">
+              <div class="tag-name">Phòng ban</div>
+            </div>
+            <div class="card-body">
+              <p class="result">14</p>
+              <p>Phòng ban đang hoạt động</p>
+            </div>
+          </div>
+          <div class="demo-card">
+            <div class="card-header">
+              <div class="tag-name">Cán bộ</div>
+            </div>
+            <div class="card-body">
+              <p class="result">52</p>
+              <p>Cán bộ đang quản lý</p>
+            </div>
+          </div>
+          <div class="demo-card">
+            <div class="card-header">
+              <div class="tag-name">Tài sản đã thanh lý</div>
+            </div>
+            <div class="card-body">
+              <p class="result">8</p>
+              <p>Thanh lý trong tháng</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <span class="icon">⚡</span>
+          Thao tác nhanh
+        </div>
+        <div class="result">
+          <p><a href="NhapTaiSan.html">Nhập tài sản mới</a></p>
+          <p><a href="NhapPhongBan.html">Thêm phòng ban</a></p>
+          <p><a href="NhapCanBo.html">Thêm cán bộ</a></p>
+          <p><a href="DieuChuyenTaiSan.html">Điều chuyển tài sản</a></p>
+          <p><a href="ThanhLyTaiSan.html">Thanh lý tài sản</a></p>
+        </div>
+      </section>
     </main>
   </div>
 </body>

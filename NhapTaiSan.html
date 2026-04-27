@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhập tài sản - Quản lý Tài sản</title>
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">📦</div>
+        <h2>Quản lý TS</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">🏠</span> Trang chủ
+        </a>
+        <a href="NhapTaiSan.html" class="nav-item active">
+          <span class="nav-icon">📝</span> Nhập tài sản
+        </a>
+        <a href="NhapPhongBan.html" class="nav-item">
+          <span class="nav-icon">🏢</span> Nhập phòng ban
+        </a>
+        <a href="NhapCanBo.html" class="nav-item">
+          <span class="nav-icon">👤</span> Nhập cán bộ
+        </a>
+        <a href="DieuChuyenTaiSan.html" class="nav-item">
+          <span class="nav-icon">🔄</span> Điều chuyển tài sản
+        </a>
+        <a href="ThanhLyTaiSan.html" class="nav-item">
+          <span class="nav-icon">🗑️</span> Thanh lý tài sản
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content main-content--form">
+      <div class="form-page">
+        <!-- Page Header -->
+        <div class="form-page-header">
+          <div class="form-page-header-content">
+            <div class="form-page-header-icon">📋</div>
+            <div>
+              <h1 class="form-page-title">Nhập thông tin tài sản</h1>
+              <p class="form-page-subtitle">Điền đầy đủ thông tin bên dưới để thêm tài sản mới vào hệ thống.</p>
+            </div>
+          </div>
+          <div class="form-page-header-badge">
+            <span class="badge-dot"></span>
+            Đang nhập liệu
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="form-card">
+          <form id="assetForm" autocomplete="off">
+            <!-- Section: Thông tin cơ bản -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <span class="form-section-icon">📌</span>
+                Thông tin cơ bản
+              </div>
+              <div class="form-grid">
+                <!-- Mã tài sản -->
+                <div class="form-group">
+                  <label for="assetCode">
+                    <span class="label-icon">🔖</span> Mã tài sản
+                  </label>
+                  <input type="text" id="assetCode" name="assetCode" placeholder="VD: TS-001" required>
+                </div>
+
+                <!-- Tên tài sản -->
+                <div class="form-group">
+                  <label for="assetName">
+                    <span class="label-icon">📋</span> Tên tài sản
+                  </label>
+                  <input type="text" id="assetName" name="assetName" placeholder="VD: Máy tính Dell Latitude" required>
+                </div>
+
+                <!-- Loại tài sản -->
+                <div class="form-group">
+                  <label for="assetType">
+                    <span class="label-icon">📂</span> Loại tài sản
+                  </label>
+                  <select id="assetType" name="assetType" required>
+                    <option value="" disabled selected>-- Chọn loại tài sản --</option>
+                    <option value="thiet-bi-cntt">Thiết bị CNTT</option>
+                    <option value="noi-that">Nội thất</option>
+                    <option value="phuong-tien">Phương tiện</option>
+                    <option value="may-moc">Máy móc</option>
+                    <option value="khac">Khác</option>
+                  </select>
+                </div>
+
+                <!-- Số lượng -->
+                <div class="form-group">
+                  <label for="quantity">
+                    <span class="label-icon">🔢</span> Số lượng
+                  </label>
+                  <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section: Tài chính & Thời gian -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <span class="form-section-icon">💰</span>
+                Tài chính & Thời gian
+              </div>
+              <div class="form-grid">
+                <!-- Ngày mua -->
+                <div class="form-group">
+                  <label for="purchaseDate">
+                    <span class="label-icon">📅</span> Ngày mua
+                  </label>
+                  <input type="date" id="purchaseDate" name="purchaseDate" required>
+                </div>
+
+                <!-- Giá nhập -->
+                <div class="form-group">
+                  <label for="price">
+                    <span class="label-icon">💰</span> Giá nhập (VNĐ)
+                  </label>
+                  <input type="text" id="price" name="price" placeholder="VD: 15,000,000" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section: Quản lý -->
+            <div class="form-section">
+              <div class="form-section-title">
+                <span class="form-section-icon">🏢</span>
+                Quản lý & Phân công
+              </div>
+              <div class="form-grid">
+                <!-- Phòng ban -->
+                <div class="form-group">
+                  <label for="department">
+                    <span class="label-icon">🏢</span> Phòng ban quản lý
+                  </label>
+                  <input type="text" id="department" name="department" placeholder="VD: Phòng Kỹ thuật" required>
+                </div>
+
+                <!-- Người quản lý -->
+                <div class="form-group">
+                  <label for="manager">
+                    <span class="label-icon">👤</span> Người quản lý
+                  </label>
+                  <input type="text" id="manager" name="manager" placeholder="VD: Nguyễn Văn A">
+                </div>
+
+                <!-- Ghi chú - full width -->
+                <div class="form-group form-group--full">
+                  <label for="notes">
+                    <span class="label-icon">📝</span> Ghi chú
+                  </label>
+                  <textarea id="notes" name="notes" rows="3" placeholder="Nhập ghi chú thêm (nếu có)..."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+              <button type="reset" class="btn btn--secondary" id="resetBtn">
+                ↺ Nhập lại
+              </button>
+              <button type="submit" class="btn btn--primary" id="submitBtn">
+                ✓ Lưu tài sản
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg">Tài sản đã được lưu thành công!</span>
+  </div>
+
+  <script>
+    document.getElementById('assetForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      // Show toast
+      const toast = document.getElementById('toast');
+      toast.classList.add('toast--show');
+      setTimeout(() => toast.classList.remove('toast--show'), 3000);
+      this.reset();
+    });
+
+    // Format price input with commas
+    document.getElementById('price').addEventListener('input', function(e) {
+      let value = e.target.value.replace(/[^\d]/g, '');
+      if (value) {
+        value = parseInt(value).toLocaleString('vi-VN');
+      }
+      e.target.value = value;
+    });
+  </script>
+</body>
+
+</html>

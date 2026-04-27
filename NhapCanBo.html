@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhập cán bộ - Quản lý Tài sản</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">📦</div>
+        <h2>Quản lý TS</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">🏠</span> Trang chủ
+        </a>
+        <a href="NhapTaiSan.html" class="nav-item">
+          <span class="nav-icon">📝</span> Nhập tài sản
+        </a>
+        <a href="NhapPhongBan.html" class="nav-item">
+          <span class="nav-icon">🏢</span> Nhập phòng ban
+        </a>
+        <a href="NhapCanBo.html" class="nav-item active">
+          <span class="nav-icon">👤</span> Nhập cán bộ
+        </a>
+        <a href="DieuChuyenTaiSan.html" class="nav-item">
+          <span class="nav-icon">🔄</span> Điều chuyển tài sản
+        </a>
+        <a href="ThanhLyTaiSan.html" class="nav-item">
+          <span class="nav-icon">🗑️</span> Thanh lý tài sản
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content main-content--form">
+      <div class="form-page">
+        <div class="form-page-header">
+          <div>
+            <h1 class="form-page-title">Nhập thông tin cán bộ</h1>
+            <p class="form-page-subtitle">Điền đầy đủ thông tin sau để thêm cán bộ mới vào hệ thống.</p>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <form id="staffForm" autocomplete="off">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="staffCode">
+                  <span class="label-icon">🆔</span> Mã cán bộ
+                </label>
+                <input type="text" id="staffCode" name="staffCode" placeholder="VD: CB-001" required>
+              </div>
+
+              <div class="form-group">
+                <label for="staffName">
+                  <span class="label-icon">👤</span> Tên cán bộ
+                </label>
+                <input type="text" id="staffName" name="staffName" placeholder="VD: Nguyễn Văn A" required>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="departmentCode">
+                  <span class="label-icon">🏢</span> Mã phòng ban
+                </label>
+                <input type="text" id="departmentCode" name="departmentCode" placeholder="VD: PB-01" required>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="reset" class="btn btn--secondary">↺ Nhập lại</button>
+              <button type="submit" class="btn btn--primary">✓ Lưu cán bộ</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg">Cán bộ đã được lưu thành công!</span>
+  </div>
+
+  <script>
+    document.getElementById('staffForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.add('toast--show');
+      setTimeout(() => toast.classList.remove('toast--show'), 3000);
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh lý tài sản - Quản lý Tài sản</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">📦</div>
+        <h2>Quản lý TS</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">🏠</span> Trang chủ
+        </a>
+        <a href="NhapTaiSan.html" class="nav-item">
+          <span class="nav-icon">📝</span> Nhập tài sản
+        </a>
+        <a href="NhapPhongBan.html" class="nav-item">
+          <span class="nav-icon">🏢</span> Nhập phòng ban
+        </a>
+        <a href="NhapCanBo.html" class="nav-item">
+          <span class="nav-icon">👤</span> Nhập cán bộ
+        </a>
+        <a href="DieuChuyenTaiSan.html" class="nav-item">
+          <span class="nav-icon">🔄</span> Điều chuyển tài sản
+        </a>
+        <a href="ThanhLyTaiSan.html" class="nav-item active">
+          <span class="nav-icon">🗑️</span> Thanh lý tài sản
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content main-content--form">
+      <div class="form-page">
+        <div class="form-page-header">
+          <div>
+            <h1 class="form-page-title">Thanh lý tài sản</h1>
+            <p class="form-page-subtitle">Nhập thông tin tài sản để thanh lý khỏi hệ thống.</p>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <form id="disposeForm" autocomplete="off">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="assetCode">
+                  <span class="label-icon">🔖</span> Mã tài sản
+                </label>
+                <input type="text" id="assetCode" name="assetCode" placeholder="VD: TS-001" required>
+              </div>
+
+              <div class="form-group">
+                <label for="officerCode">
+                  <span class="label-icon">👤</span> Mã cán bộ quản lý
+                </label>
+                <input type="text" id="officerCode" name="officerCode" placeholder="VD: CB-001" required>
+              </div>
+
+              <div class="form-group">
+                <label for="disposeDate">
+                  <span class="label-icon">📅</span> Ngày thanh lý
+                </label>
+                <input type="date" id="disposeDate" name="disposeDate" required>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="disposeReason">
+                  <span class="label-icon">📝</span> Lý do thanh lý
+                </label>
+                <textarea id="disposeReason" name="disposeReason" rows="3" placeholder="Nhập lý do thanh lý..." required></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="reset" class="btn btn--secondary">↺ Nhập lại</button>
+              <button type="submit" class="btn btn--primary">✓ Lưu thanh lý</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg">Đã lưu thông tin thanh lý tài sản!</span>
+  </div>
+
+  <script>
+    document.getElementById('disposeForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.add('toast--show');
+      setTimeout(() => toast.classList.remove('toast--show'), 3000);
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>

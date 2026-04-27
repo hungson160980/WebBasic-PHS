@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhập phòng ban - Quản lý Tài sản</title>
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">📦</div>
+        <h2>Quản lý TS</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">🏠</span> Trang chủ
+        </a>
+        <a href="NhapTaiSan.html" class="nav-item">
+          <span class="nav-icon">📝</span> Nhập tài sản
+        </a>
+        <a href="NhapPhongBan.html" class="nav-item active">
+          <span class="nav-icon">🏢</span> Nhập phòng ban
+        </a>
+        <a href="NhapCanBo.html" class="nav-item">
+          <span class="nav-icon">👤</span> Nhập cán bộ
+        </a>
+        <a href="DieuChuyenTaiSan.html" class="nav-item">
+          <span class="nav-icon">🔄</span> Điều chuyển tài sản
+        </a>
+        <a href="ThanhLyTaiSan.html" class="nav-item">
+          <span class="nav-icon">🗑️</span> Thanh lý tài sản
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content main-content--form">
+      <div class="form-page">
+        <!-- Page Header -->
+        <div class="form-page-header">
+          <div class="form-page-header-content">
+            <div class="form-page-header-icon">🏢</div>
+            <div>
+              <h1 class="form-page-title">Nhập thông tin phòng ban</h1>
+              <p class="form-page-subtitle">Điền đầy đủ thông tin bên dưới để thêm phòng ban mới vào hệ thống.</p>
+            </div>
+          </div>
+          <div class="form-page-header-badge">
+            <span class="badge-dot"></span>
+            Đang nhập liệu
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="form-card">
+          <form id="departmentForm" autocomplete="off">
+            <div class="form-section">
+              <div class="form-section-title">
+                <span class="form-section-icon">📌</span>
+                Thông tin phòng ban
+              </div>
+              <div class="form-grid">
+                <!-- Mã phòng ban -->
+                <div class="form-group">
+                  <label for="deptCode">
+                    <span class="label-icon">🔖</span> Mã phòng ban
+                  </label>
+                  <input type="text" id="deptCode" name="deptCode" placeholder="VD: PB-001" required>
+                </div>
+
+                <!-- Tên phòng ban -->
+                <div class="form-group">
+                  <label for="deptName">
+                    <span class="label-icon">🏢</span> Tên phòng ban
+                  </label>
+                  <input type="text" id="deptName" name="deptName" placeholder="VD: Phòng Kỹ thuật" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+              <button type="reset" class="btn btn--secondary" id="resetBtn">
+                ↺ Nhập lại
+              </button>
+              <button type="submit" class="btn btn--primary" id="submitBtn">
+                ✓ Lưu phòng ban
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg">Phòng ban đã được lưu thành công!</span>
+  </div>
+
+  <script>
+    document.getElementById('departmentForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.add('toast--show');
+      setTimeout(() => toast.classList.remove('toast--show'), 3000);
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Điều chuyển tài sản - Quản lý Tài sản</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">📦</div>
+        <h2>Quản lý TS</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">🏠</span> Trang chủ
+        </a>
+        <a href="NhapTaiSan.html" class="nav-item">
+          <span class="nav-icon">📝</span> Nhập tài sản
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🏢</span> Nhập phòng ban
+        </a>
+        <a href="NhapCanBo.html" class="nav-item">
+          <span class="nav-icon">👤</span> Nhập cán bộ
+        </a>
+        <a href="DieuChuyenTaiSan.html" class="nav-item active">
+          <span class="nav-icon">🔄</span> Điều chuyển tài sản
+        </a>
+        <a href="ThanhLyTaiSan.html" class="nav-item">
+          <span class="nav-icon">🗑️</span> Thanh lý tài sản
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content main-content--form">
+      <div class="form-page">
+        <div class="form-page-header">
+          <div>
+            <h1 class="form-page-title">Điều chuyển tài sản</h1>
+            <p class="form-page-subtitle">Điền thông tin để chuyển tài sản từ cán bộ này sang cán bộ khác.</p>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <form id="transferForm" autocomplete="off">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="assetCode">
+                  <span class="label-icon">🔖</span> Mã tài sản
+                </label>
+                <input type="text" id="assetCode" name="assetCode" placeholder="VD: TS-001" required>
+              </div>
+
+              <div class="form-group">
+                <label for="fromStaffCode">
+                  <span class="label-icon">👤</span> Mã cán bộ chuyển
+                </label>
+                <input type="text" id="fromStaffCode" name="fromStaffCode" placeholder="VD: CB-001" required>
+              </div>
+
+              <div class="form-group">
+                <label for="toStaffCode">
+                  <span class="label-icon">👤</span> Mã cán bộ nhận
+                </label>
+                <input type="text" id="toStaffCode" name="toStaffCode" placeholder="VD: CB-002" required>
+              </div>
+
+              <div class="form-group">
+                <label for="transferDate">
+                  <span class="label-icon">📅</span> Ngày điều chuyển
+                </label>
+                <input type="date" id="transferDate" name="transferDate" required>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="transferNotes">
+                  <span class="label-icon">📝</span> Ghi chú
+                </label>
+                <textarea id="transferNotes" name="transferNotes" rows="3" placeholder="Ghi chú thêm (nếu có)..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="reset" class="btn btn--secondary">↺ Nhập lại</button>
+              <button type="submit" class="btn btn--primary">✓ Lưu điều chuyển</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg">Điều chuyển đã được lưu thành công!</span>
+  </div>
+
+  <script>
+    document.getElementById('transferForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.add('toast--show');
+      setTimeout(() => toast.classList.remove('toast--show'), 3000);
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>
