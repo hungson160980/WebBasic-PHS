@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Cán bộ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #cb1616;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+        }
+        table {
+            color: yellow;
+            width: 50%;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid ;
+            padding: 8px;
+        }
+        th {
+           
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Danh Sách Cán bộ</h2>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTable");
+            if (x.style.display === "none") {
+                x.style.display = "table";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        for (let i = 1; i <= 10; i++) {
+            "<table><tr><td>1</td><td>Nguyễn Văn Hùng</td><td>Giám đốc</td><td>Phòng Kinh doanh</td></tr><tr><td>2</td><td>Trần Thị B</td><td>Quản lý</td><td>Phòng Nhân sự</td></tr></table>"
+        }   
+    </script>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>Chức vụ</th>
+                <th>Đơn vị</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>Giám đốc</td>
+                <td>Phòng Kinh doanh</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Trần Thị B</td>
+                <td>Quản lý</td>
+                <td>Phòng Nhân sự</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form_login {
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form_login h2 {
+            text-align: center;
+            color: #d81515;
+        }
+        .form_login label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form_login input {
+            width: 93%;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .form_login button {
+            width: 300px;
+            padding: 10px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .form_login button:hover {
+            background-color: #d81515;
+        }
+        .form_login .dangky, .form_login .quenmatkhau {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form_login">
+        <h2>Nhập user, password để đăng nhập </h2>
+        
+        <form>
+            <label for="username" >Username:</label>
+            <input type="text" placeholder="Username" id="username" name="username" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Password" id="password" name="password" required>
+            <br><br>
+            <button type="submit">Login</button>
+            <label for="register" class="dangky">Chưa có tài khoản? <a href="register.html">Đăng ký</a></label>
+            <label for="forgot-password" class="quenmatkhau">Quên mật khẩu?<a href="forgot-password.html"> Click here</a></label>
+        </form>
+    </div>
+    <script></script>
+</body>
+</html>

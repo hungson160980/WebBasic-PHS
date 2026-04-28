@@ -77,6 +77,18 @@
             </div>
           </form>
         </div>
+
+        <!-- CRUD Buttons Section -->
+        <div class="crud-section">
+          <h3>Thao tác CRUD cho Cán bộ</h3>
+          <div class="crud-buttons">
+            <button class="btn btn--primary" onclick="createStaff()">➕ Tạo mới</button>
+            <button class="btn btn--secondary" onclick="readStaff()">📖 Xem danh sách</button>
+            <button class="btn btn--warning" onclick="updateStaff()">✏️ Cập nhật</button>
+            <button class="btn btn--danger" onclick="deleteStaff()">🗑️ Xóa</button>
+          </div>
+        </div>
+
       </div>
     </main>
   </div>
@@ -94,6 +106,23 @@
       setTimeout(() => toast.classList.remove('toast--show'), 3000);
       this.reset();
     });
+
+    // CRUD Functions
+    function createStaff() {
+      alert('Chức năng tạo mới cán bộ. Sử dụng form ở trên để nhập và lưu.');
+    }
+
+    function readStaff() {
+      alert('Chức năng xem danh sách cán bộ. (Chưa triển khai - cần trang danh sách)');
+    }
+
+    function updateStaff() {
+      alert('Chức năng cập nhật cán bộ. (Chưa triển khai - cần chọn cán bộ)');
+    }
+
+    function deleteStaff() {
+      alert('Chức năng xóa cán bộ. (Chưa triển khai - cần chọn cán bộ)');
+    }
   </script>
 </body>
 

@@ -644,7 +644,7 @@ table tr:hover {
 .sidebar {
   width: 280px;
   min-height: 100vh;
-  background: linear-gradient(180deg, #8e8eed 0%, #0b0bc9 100%);
+  background: linear-gradient(180deg, #ec3981 0%, #db0c39 100%);
   border-right: 1px solid rgba(108, 76, 230, 0.15);
   padding: 0;
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
@@ -742,7 +742,7 @@ table tr:hover {
 .welcome-section {
   max-width: 640px;
   width: 100%;
-  padding: 40px 36px;
+  padding: 0% 0px;
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -752,13 +752,14 @@ table tr:hover {
 .welcome-section h1 {
   color: var(--accent-1);
   font-size: 2.5rem;
-  margin-bottom: 20px;
-}
+  margin-bottom: 120px;}
 
 .welcome-section p {
   font-size: 1.1rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  justify-content: center;
+  padding-top: none;
 }
 
 /* ===== FORM PAGE ===== */
@@ -859,7 +860,7 @@ table tr:hover {
 
 /* ===== FORM SECTIONS ===== */
 .form-section {
-  padding: 24px 36px;
+  padding: 5px 36px;
   border-bottom: 1px solid rgba(108, 76, 230, 0.08);
 }
 
@@ -873,11 +874,11 @@ table tr:hover {
   color: var(--accent-1);
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding-bottom: 12px;
+  padding-bottom: 5px;
   border-bottom: 2px solid rgba(108, 76, 230, 0.08);
 }
 
@@ -921,7 +922,7 @@ table tr:hover {
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 13px 16px;
+  padding: 5px 16px;
   background: var(--bg-secondary);
   border: 1.5px solid rgba(108, 76, 230, 0.1);
   border-radius: 10px;
@@ -962,13 +963,13 @@ table tr:hover {
   display: flex;
   justify-content: flex-end;
   gap: 14px;
-  padding: 20px 36px 28px;
+  padding: 5px 5px 28px;
   background: rgba(245, 247, 251, 0.5);
-  border-top: 1px solid rgba(108, 76, 230, 0.08);
+  border-top: 5px solid rgba(108, 76, 230, 0.08);
 }
 
 .btn {
-  padding: 13px 32px;
+  padding: 5px 32px;
   border: none;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
@@ -1010,6 +1011,44 @@ table tr:hover {
   border-color: rgba(108, 76, 230, 0.3);
   color: var(--accent-1);
   transform: translateY(-1px);
+}
+
+.btn--warning {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(243, 156, 18, 0.25);
+}
+
+.btn--warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(243, 156, 18, 0.35);
+  filter: brightness(1.05);
+}
+
+.btn--danger {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(231, 76, 60, 0.25);
+}
+
+.btn--danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(231, 76, 60, 0.35);
+  filter: brightness(1.05);
+}
+
+.crud-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.crud-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 /* ===== TOAST ===== */

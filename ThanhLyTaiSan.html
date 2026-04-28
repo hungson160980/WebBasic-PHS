@@ -84,6 +84,18 @@
             </div>
           </form>
         </div>
+
+        <!-- CRUD Buttons Section -->
+        <div class="crud-section">
+          <h3>Thao tác CRUD cho Thanh lý Tài sản</h3>
+          <div class="crud-buttons">
+            <button class="btn btn--primary" onclick="createDisposal()">➕ Tạo mới</button>
+            <button class="btn btn--secondary" onclick="readDisposals()">📖 Xem danh sách</button>
+            <button class="btn btn--warning" onclick="updateDisposal()">✏️ Cập nhật</button>
+            <button class="btn btn--danger" onclick="deleteDisposal()">🗑️ Xóa</button>
+          </div>
+        </div>
+
       </div>
     </main>
   </div>
@@ -101,6 +113,23 @@
       setTimeout(() => toast.classList.remove('toast--show'), 3000);
       this.reset();
     });
+
+    // CRUD Functions
+    function createDisposal() {
+      alert('Chức năng tạo mới thanh lý. Sử dụng form ở trên để nhập và lưu.');
+    }
+
+    function readDisposals() {
+      alert('Chức năng xem danh sách thanh lý. (Chưa triển khai - cần trang danh sách)');
+    }
+
+    function updateDisposal() {
+      alert('Chức năng cập nhật thanh lý. (Chưa triển khai - cần chọn thanh lý)');
+    }
+
+    function deleteDisposal() {
+      alert('Chức năng xóa thanh lý. (Chưa triển khai - cần chọn thanh lý)');
+    }
   </script>
 </body>
 

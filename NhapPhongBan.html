@@ -92,6 +92,18 @@
             </div>
           </form>
         </div>
+
+        <!-- CRUD Buttons Section -->
+        <div class="crud-section">
+          <h3>Thao tác CRUD cho Phòng ban</h3>
+          <div class="crud-buttons">
+            <button class="btn btn--primary" onclick="createDepartment()">➕ Tạo mới</button>
+            <button class="btn btn--secondary" onclick="readDepartments()">📖 Xem danh sách</button>
+            <button class="btn btn--warning" onclick="updateDepartment()">✏️ Cập nhật</button>
+            <button class="btn btn--danger" onclick="deleteDepartment()">🗑️ Xóa</button>
+          </div>
+        </div>
+
       </div>
     </main>
   </div>
@@ -110,6 +122,23 @@
       setTimeout(() => toast.classList.remove('toast--show'), 3000);
       this.reset();
     });
+
+    // CRUD Functions
+    function createDepartment() {
+      alert('Chức năng tạo mới phòng ban. Sử dụng form ở trên để nhập và lưu.');
+    }
+
+    function readDepartments() {
+      alert('Chức năng xem danh sách phòng ban. (Chưa triển khai - cần trang danh sách)');
+    }
+
+    function updateDepartment() {
+      alert('Chức năng cập nhật phòng ban. (Chưa triển khai - cần chọn phòng ban)');
+    }
+
+    function deleteDepartment() {
+      alert('Chức năng xóa phòng ban. (Chưa triển khai - cần chọn phòng ban)');
+    }
   </script>
 </body>
 
